@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Header from "Layouts/Header";
 import SearchBar from "Layouts/SearchBar";
 
@@ -22,11 +24,26 @@ const theme = createTheme({
 function App() {
   const { flex } = styles;
 
+  const [searchValue, setSearchValue] = useState("");
+
+  const changeHandler = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  const searchHandler = (e) => {
+    e.preventDefault();
+    console.log("searching...");
+    console.log(searchValue);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Header />
       <div className={flex}>
-        <SearchBar />
+        <SearchBar
+          searchHandler={searchHandler}
+          changeHandler={changeHandler}
+        />
       </div>
     </ThemeProvider>
   );
