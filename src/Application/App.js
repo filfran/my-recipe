@@ -16,13 +16,13 @@ const theme = createTheme({
       main: "#2196f3",
     },
     textColor: {
-      main: "#545254 ",
+      main: "#545254",
     },
   },
 });
 
 function App() {
-  const { flex } = styles;
+  const { main } = styles;
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -39,7 +39,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <div className={flex}>
+      <div className={main}>
         <SearchBar
           searchHandler={searchHandler}
           changeHandler={changeHandler}

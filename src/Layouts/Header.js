@@ -12,7 +12,16 @@ const Header = (props) => {
   return (
     <AppBar position="static" color="primary">
       <Toolbar>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h4"
+          component="div"
+          sx={{
+            flexGrow: 1,
+            fontFamily: "Lobster, cursive",
+            fontSize: "3.5rem",
+            fontStyle: "italic",
+          }}
+        >
           My Recipe
         </Typography>
         <div className={btn}>

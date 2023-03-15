@@ -1,5 +1,14 @@
-.flex {
+.main {
+  height: 94.9vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(79, 79, 176, 0.7),
+      rgba(190, 118, 221, 0.8)
+    ),
+    url("../../public/hero.jpg");
+  background-size: cover;
+  background-position: top;
 }
